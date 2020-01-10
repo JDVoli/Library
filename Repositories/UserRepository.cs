@@ -11,7 +11,7 @@ namespace Library.Repositories
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        private const string ReaderRole = "Reader";
+//        private const string ReaderRole = "Reader";
 
         public UserRepository(LibraryContext context) : base(context)
         {

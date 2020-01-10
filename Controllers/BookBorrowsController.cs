@@ -25,6 +25,13 @@ namespace Library.Controllers
             return CreatedAtRoute(nameof(AddBookBorrow), res);
         }
 
+        [HttpPut("{idBookBorrow}")]
+        public async Task<IActionResult> UpdateBookBorrow([FromBody] UpdateBookBorrowDto borrow)
+        {
+            await _bookBorrowRepository.ChangeBookBorrow(borrow);
+            return NoContent();
+        }
+
         
     }
 }
