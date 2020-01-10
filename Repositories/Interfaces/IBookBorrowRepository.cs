@@ -4,8 +4,8 @@ using Library.Models.DTO;
 
 namespace Library.Repositories.Interfaces
 {
-    public interface IAccountRepository : IBaseRepository
+    public interface IBookBorrowRepository : IBaseRepository
     {
-        Task<User> Login(LoginDto login);
+        Task<BookBorrow> AddBookBorrow(BookBorrowDto borrow);
     }
 }

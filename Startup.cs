@@ -21,6 +21,7 @@ namespace Library
         {
             services.ConfigureDb(Configuration);
             services.ConfigureDependencies(Configuration);
+            services.ConfigureAuthentication(Configuration);
             services.ConfigureSwagger();
             services.AddMvc()
                 .AddJsonOptions(options =>
@@ -45,6 +46,8 @@ namespace Library
                 c.SwaggerEndpoint("swagger/v1/swagger.json", "Library API");
                 c.RoutePrefix = string.Empty;
             });
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }

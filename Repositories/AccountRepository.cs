@@ -13,12 +13,15 @@ namespace Library.Repositories
         {
         }
 
-        public async Task<bool> Login(LoginDto login)
+        public async Task<User> Login(LoginDto login)
         {
-            var userFromDb = await _context.User.SingleAsync(x => x.Login == login.Login);
+            var userFromDb = await _context.User.Include(x => x.IdUserRoleDictNavigation).SingleOrDefaultAsync(x => x.Login == login.Login);
 
-            return new PasswordHasher().VerifyHashedPassword(userFromDb.Password, login.Password) == PasswordVerificationResult.Success;
+            if (userFromDb == null)
+                return null;
 
+            return new PasswordHasher().VerifyHashedPassword(userFromDb.Password, login.Password) ==
+                   PasswordVerificationResult.Success ? userFromDb : null;
         }
     }
 }
