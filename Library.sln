@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library.csproj", "{8D6ECF30-D8B5-4A30-9EB5-D3DB51E9B563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "Api\Library.csproj", "{8D6ECF30-D8B5-4A30-9EB5-D3DB51E9B563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{EF6A7D98-403B-4AE6-B532-1A16FFAC0B80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8D6ECF30-D8B5-4A30-9EB5-D3DB51E9B563}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D6ECF30-D8B5-4A30-9EB5-D3DB51E9B563}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D6ECF30-D8B5-4A30-9EB5-D3DB51E9B563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6A7D98-403B-4AE6-B532-1A16FFAC0B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6A7D98-403B-4AE6-B532-1A16FFAC0B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6A7D98-403B-4AE6-B532-1A16FFAC0B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6A7D98-403B-4AE6-B532-1A16FFAC0B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
